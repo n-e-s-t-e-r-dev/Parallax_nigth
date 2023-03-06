@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlos Muñoz | Bosque Parallax</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+    <header id="header">
+        <a href="#" class="logo">Nature</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Destination</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section class="sectionS">
+        <img src="./assets/img/luna.png" id="luna" alt="luna">
+        <img src="./assets/img/md.png" id="md" alt="montaña">
+        <img src="./assets/img/mi.png" id="mi" alt="montaña">
+        <h2 id="text"><span>It's time for a new</span><br>My Adventure</h2>
+        <img src="./assets/img/mc.png" id="mc" alt="montaña">
+        
+        <img src="./assets/img/ave1.png" id="ave1" alt="bird">
+        <img src="./assets/img/ave2.png" id="ave2" alt="bird">
+        <img src="./assets/img/sombra.png" id="sombra" alt="sombra bosque">
+        <a href="#" id="btn">Explore</a>
+        <img src="./assets/img/siervo.png" id="siervo" alt="siervo">
+        <img src="./assets/img/arboles.png" id="arboles" alt="arboles">
+        
+    </section>
+    <div class="sec">
+        <h2>Parallax Scroll</h2>
+        <p>Con el efecto Parallax ( o parallax effect) conseguimos hacer que el fondo de una sección se mueva a una
+            velocidad distinta que su contenido, creando una percepción visual muy interesante y vistosa. Normalmente
+            puede realizarse con javascript utilizando alguna librería como Rellax, o programando de cero <br><br>Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ducimus temporibus inventore vero modi ratione
+            officia nesciunt! Laborum, nostrum recusandae! <br><br>Lorem ipsum dolor sit, amet consectetur adipisicing
+            elit. Accusamus dolore architecto dignissimos dicta soluta rem veniam eveniet hic reiciendis id ipsa,
+            cupiditate delectus enim! <br><br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga praesentium
+            aperiam vero ex officiis voluptas explicabo blanditiis nulla, consectetur esse odio voluptate libero, et
+            alias. Quaerat error excepturi delectus quam! <br><br>Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Ratione deserunt praesentium consequatur tempore? Obcaecati sunt libero alias repellendus commodi
+            corrupti sed temporibus modi sapiente, non hic fugit maiores praesentium voluptatem rerum nisi consectetur
+            magnam incidunt ut qui doloremque quis earum porro? Aspernatur illum veniam harum vero eos blanditiis
+            obcaecati dolor, necessitatibus nam assumenda, voluptate cupiditate amet deleniti atque dolorum ad.
+            Consequatur tenetur numquam hic sed, iusto nulla delectus recusandae ea iure ducimus, veritatis eveniet
+            culpa. Non corporis modi distinctio. Quis et dolores aliquid excepturi nisi dolore ipsum dicta delectus.
+            Esse iusto, laboriosam repellendus quisquam modi ratione necessitatibus deserunt at omnis!<br><br>Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Ratione deserunt praesentium consequatur tempore? Obcaecati sunt libero alias repellendus commodi
+            corrupti sed temporibus modi sapiente, non hic fugit maiores praesentium voluptatem rerum nisi consectetur
+            magnam incidunt ut qui doloremque quis earum porro? Aspernatur illum veniam harum vero eos blanditiis
+            obcaecati dolor, necessitatibus nam assumenda, voluptate cupiditate amet deleniti atque dolorum ad.
+            Consequatur tenetur numquam hic sed, iusto nulla delectus recusandae ea iure ducimus, veritatis eveniet
+            culpa. Non corporis modi distinctio. Quis et dolores aliquid excepturi nisi dolore ipsum dicta delectus.
+            Esse iusto, laboriosam repellendus quisquam modi ratione necessitatibus deserunt at omnis!</p>
+    </div>
+    <script>
+        let text = document.getElementById('text');
+        let luna = document.getElementById('luna');
+        let md = document.getElementById('md');
+        let mi = document.getElementById('mi');
+        let mc = document.getElementById('mc');
+        let ave1 = document.getElementById('ave1');
+        let ave2 = document.getElementById('ave2');
+        let sombra = document.getElementById('sombra');
+        let btn = document.getElementById('btn');
+        let siervo = document.getElementById('siervo');
+        let arboles = document.getElementById('arboles');
+        let header = document.getElementById('header');
+
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+
+            text.style.top = 50 + value * -0.5 + '%';
+            luna.style.top = value * -1.5 + 'px';
+            mi.style.top = value * -1.5 + 'px'
+            mi.style.left = value * 2 + 'px';
+            md.style.top = value * -1.5 + 'px';
+            md.style.left = value * -5 + 'px';
+            mc.style.top = value * 2.5 + 'px';
+            ave2.style.top = value * -.5 + 'px'
+            ave2.style.left = value * 2 + 'px';
+            ave1.style.top = value * -1.5 + 'px';
+            ave1.style.left = value * -5 + 'px';
+            sombra.style.top = value * 3.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            siervo.style.bottom = value * -0.5 + 'px';
+            arboles.style.top = value * -0.12 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+        
+    </script>
+
+    <script src="./js/parallax.js"></script>
+</body>
+
+</html>
